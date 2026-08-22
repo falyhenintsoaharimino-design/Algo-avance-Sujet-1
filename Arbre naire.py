@@ -2,17 +2,10 @@
 Projet Algorithmique Avancee - Sujet 1 : Arbre n-aire
 Script unique regroupant les 4 parties du travail de groupe.
 
-Voir GUIDE_PROJET.md pour le detail du raisonnement de chaque choix.
-
-Repartition (a completer avec vos vrais noms dans le rapport PDF) :
-    Partie 1 - Etudiant 1 : Structure de donnees de base
-    Partie 2 - Etudiant 2 : Parcours et recherche
-    Partie 3 - Etudiant 3 : Ameliorations
-    Partie 4 - Etudiant 4 : Integration, tests et interface
 """
 
 
-# PARTIE 1 - ETUDIANT 1 : Structure de donnees de base
+# PARTIE 1 - Erwan : Structure de donnees de base
 # Definit la classe Noeud (une valeur + une liste d'enfants) et la
 # classe ArbreNaire (racine + construction). Aucune bibliotheque de
 # structure de donnees externe n'est utilisee : uniquement des classes
@@ -93,7 +86,7 @@ def construire_arbre_exemple():
     return arbre
 
 
-# PARTIE 2 - ETUDIANT 2 : Parcours et recherche
+# PARTIE 2 - Faly : Parcours et recherche
 # Voir GUIDE_PROJET.md section 1 pour le raisonnement complet sur le
 # choix d'interpretation des termes "infixe / postfixe / suffixe"
 # appliques a un arbre n-aire (infixe -> prefixe adapte,
@@ -165,9 +158,9 @@ def rechercher(racine, valeur_cherchee):
     return None
 
 
-# PARTIE 3 - ETUDIANT 3 : Ameliorations
+# PARTIE 3 - Faly : Ameliorations
 # Fonctionnalites choisies car interessantes algorithmiquement et
-# utiles pour la demonstration video (voir GUIDE_PROJET.md).
+# utiles pour la demonstration video .
 
 def hauteur(noeud):
     """Hauteur de l'arbre (nombre d'arcs jusqu'a la feuille la plus
@@ -249,7 +242,7 @@ def afficher_arbre(noeud, prefixe="", est_dernier=True):
         afficher_arbre(enfant, nouveau_prefixe, est_dernier_enfant)
 
 
-# PARTIE 4 - ETUDIANT 4 : Integration, tests et interface
+# PARTIE 4 - Rado : Integration, tests et interface
 # Assemble les parties 1, 2 et 3. Sert aussi de script pour la
 # demonstration video (Vokoscreen/Bandicam) : lancer le fichier et
 # suivre le menu.
