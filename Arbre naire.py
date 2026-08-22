@@ -6,22 +6,13 @@ Script unique regroupant les 4 parties du travail de groupe.
 
 
 # PARTIE 1 - Erwan : Structure de donnees de base
-# Definit la classe Noeud (une valeur + une liste d'enfants) et la
-# classe ArbreNaire (racine + construction). Aucune bibliotheque de
-# structure de donnees externe n'est utilisee : uniquement des classes
-# et des listes natives Python, autorise par la consigne.
 
 class Noeud:
-    """Represente un noeud de l'arbre n-aire.
-
-    Un noeud contient une valeur et une liste de noeuds enfants
-    (contrairement a un arbre binaire, il n'y a pas de limite au
-    nombre d'enfants).
-    """
+    """noeud de l'arbre n-aire."""
 
     def __init__(self, valeur):
         self.valeur = valeur
-        self.enfants = []  # liste native Python, pas de bibliotheque externe
+        self.enfants = [] 
 
     def ajouter_enfant(self, noeud_enfant):
         """Ajoute un noeud deja cree comme enfant direct de ce noeud."""
@@ -68,15 +59,7 @@ class ArbreNaire:
 
 
 def construire_arbre_exemple():
-    """Construit un petit arbre d'exemple pour les tests et la demo video.
-
-        Racine
-        |-- Enfant1
-        |     |-- PetitFils1
-        |     +-- PetitFils2
-        |-- Enfant2
-        +-- Enfant3
-    """
+    """Construit un petit arbre d'exemple."""
     arbre = ArbreNaire("Racine")
     arbre.ajouter_enfant("Racine", "Enfant1")
     arbre.ajouter_enfant("Racine", "Enfant2")
@@ -87,14 +70,9 @@ def construire_arbre_exemple():
 
 
 # PARTIE 2 - Faly : Parcours et recherche
-# Voir GUIDE_PROJET.md section 1 pour le raisonnement complet sur le
-# choix d'interpretation des termes "infixe / postfixe / suffixe"
-# appliques a un arbre n-aire (infixe -> prefixe adapte,
-# suffixe -> parcours en largeur).
 
 def parcours_prefixe(noeud):
     """Parcours en profondeur : le noeud est visite AVANT ses enfants.
-    Interpretation retenue pour "infixe" dans l'enonce.
     """
     if noeud is None:
         return []
@@ -107,7 +85,6 @@ def parcours_prefixe(noeud):
 
 def parcours_postfixe(noeud):
     """Parcours en profondeur : le noeud est visite APRES tous ses enfants.
-    Correspond directement au postfixe de l'enonce.
     """
     if noeud is None:
         return []
@@ -121,9 +98,6 @@ def parcours_postfixe(noeud):
 
 def parcours_largeur(racine):
     """Parcours en largeur (BFS), niveau par niveau.
-    Interpretation retenue pour "suffixe" dans l'enonce. Implemente
-    avec une liste Python utilisee comme file (pas de bibliotheque
-    externe type collections.deque).
     """
     if racine is None:
         return []
@@ -159,8 +133,6 @@ def rechercher(racine, valeur_cherchee):
 
 
 # PARTIE 3 - Faly : Ameliorations
-# Fonctionnalites choisies car interessantes algorithmiquement et
-# utiles pour la demonstration video .
 
 def hauteur(noeud):
     """Hauteur de l'arbre (nombre d'arcs jusqu'a la feuille la plus
@@ -227,7 +199,6 @@ def _supprimer_recursif(noeud_parent, valeur_a_supprimer):
 
 def afficher_arbre(noeud, prefixe="", est_dernier=True):
     """Affiche l'arbre dans la console avec une indentation visuelle,
-    pour rendre la structure lisible pendant la demonstration video.
     """
     if noeud is None:
         return
@@ -243,13 +214,10 @@ def afficher_arbre(noeud, prefixe="", est_dernier=True):
 
 
 # PARTIE 4 - Rado : Integration, tests et interface
-# Assemble les parties 1, 2 et 3. Sert aussi de script pour la
-# demonstration video (Vokoscreen/Bandicam) : lancer le fichier et
-# suivre le menu.
 
 def executer_tests():
     """Verification automatique que les 3 parties fonctionnent bien
-    ensemble. A lancer avant la demo pour etre sur que rien n'est casse.
+    ensemble.
     """
     print("=== Tests automatiques ===")
     arbre = construire_arbre_exemple()
@@ -268,7 +236,7 @@ def executer_tests():
 
 
 def menu():
-    """Menu interactif en console pour manipuler l'arbre pendant la demo."""
+    """Menu interactif en console pour manipuler l'arbre."""
     arbre = construire_arbre_exemple()
 
     while True:
