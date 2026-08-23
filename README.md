@@ -5,10 +5,10 @@
 ### Partie 1 — RAVELONJARA Erwan Calixte Matricule 416 : Structure de données
 Création des classes `Noeud` et `ArbreNaire` : la base sur laquelle tout le reste du programme s'appuie. Permet de construire un arbre et d'y ajouter des éléments.
 
-### Partie 2 — HAIMINO Faly Henintsoa Matricule 401 : Parcours et recherche
+### Partie 2 — HARIMINO Faly Henintsoa Matricule 401 : Parcours et recherche
 Implémentation des trois parcours de l'arbre (préfixe, postfixe, en largeur) et de la fonction de recherche d'une valeur.
 
-### Partie 3 — HAIMINO Faly Henintsoa Matricule 401 : Améliorations
+### Partie 3 — HARIMINO Faly Henintsoa Matricule 401 : Améliorations
 Ajout de fonctionnalités supplémentaires : calcul de la hauteur, comptage des nœuds et des feuilles, suppression d'un nœud, et affichage visuel de l'arbre dans la console.
 
 ### Partie 4 — ISHA Andriamirado Matriucle 402 : Intégration et interface
