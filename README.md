@@ -1,4 +1,4 @@
-# Projet Algorithmique Avancée — Arbre n-aire (Sujet 1)
+# Projet Algorithme Avancée — Arbre n-aire (Sujet 1)
 
 ## Répartition des tâches
 
